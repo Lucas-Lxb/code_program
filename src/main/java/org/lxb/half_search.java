@@ -30,14 +30,9 @@ public class half_search {
 
         /**
          * 在这里将 arr.length - 1 改为 arr.length 是要符合左闭右开区间的要求
-         * 保证在开始时候最右边的元素在讨论的范畴之内
+         * 保证在开始时候 最右边的元素 在讨论的范畴之内
          */
         int left = 0, right = arr.length;
-
-
-        if(target < arr[left] || target >= arr[right]) {
-            return -1;
-        }
 
         while(left < right) {
             int middle = left + ((right - left) >> 1);
